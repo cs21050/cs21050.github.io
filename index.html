@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>シフト提出</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body onload="setCurrentMonth()">
-    <h1>アルバイトシフト提出</h1>
-    <form id="shiftForm">
-        <label for="month">出勤可能な月を選択してください:</label>
-        <input type="month" id="month" name="month" required onchange="generateCalendar()">
-        
-        <div id="calendar"></div>
-        
-        <div id="timeInputs">
-            <h2>出勤可能な時間帯</h2>
-            <div id="timeForm"></div>
-        </div>
-        
-        <button type="button" onclick="submitShift()">シフトを提出</button>
-    </form>
+    <div class="container">
+        <h1>アルバイトシフト提出</h1>
+        <form id="shiftForm">
+            <label for="month">出勤可能な月を選択してください:</label>
+            <input type="month" id="month" name="month" required onchange="generateCalendar()">
+            
+            <div id="calendar"></div>
+            
+            <div id="timeInputs">
+                <h2>出勤可能な時間帯</h2>
+                <div id="timeForm"></div>
+            </div>
+            
+            <button type="button" onclick="submitShift()">シフトを提出</button>
+        </form>
 
-    <h2>出勤可能月日と時間帯</h2>
-    <textarea id="output" rows="10" cols="50" readonly></textarea>
-
+        <h2>出勤可能月日と時間帯</h2>
+        <textarea id="output" rows="10" cols="50" readonly></textarea>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
